@@ -8,4 +8,5 @@ func main() {
 			panic(err)
 		}
 	}
+	db.Unscoped().Where("name = ?", "LuckyZ").Delete(&User{})
 }
