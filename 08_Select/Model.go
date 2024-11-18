@@ -10,3 +10,8 @@ type User struct {
 	Name string `gorm:"comment:名字"`
 	Age  int    `gorm:"comment:年龄"`
 }
+
+type getUser struct {
+	Name string
+	Age  int
+}
