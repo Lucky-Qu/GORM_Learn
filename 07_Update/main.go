@@ -8,4 +8,6 @@ func main() {
 			panic(err)
 		}
 	}
+	db.Model(&User{}).Where("name = ?", "LuckyQu").Update("name", "LuckyZ")
+
 }
