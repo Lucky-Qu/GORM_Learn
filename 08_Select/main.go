@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	_ "github.com/go-sql-driver/mysql"
+)
+
 func main() {
 	db := ConnectDB()
 	if !db.Migrator().HasTable(&User{}) {
@@ -8,4 +13,7 @@ func main() {
 			panic(err)
 		}
 	}
+	var u User
+	db.Model(&User{}).Find(&u)
+	fmt.Println(u)
 }

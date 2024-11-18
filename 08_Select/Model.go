@@ -1,6 +1,9 @@
 package main
 
-import "gorm.io/gorm"
+import (
+	_ "github.com/go-sql-driver/mysql"
+	"gorm.io/gorm"
+)
 
 type User struct {
 	gorm.Model
