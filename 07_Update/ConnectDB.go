@@ -12,7 +12,7 @@ func ConnectDB() *gorm.DB {
 	}), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: false,
-			TablePrefix:   "Create_",
+			TablePrefix:   "CRUD_",
 		},
 	})
 	if err != nil {
